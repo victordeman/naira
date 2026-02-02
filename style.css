@@ -1,38 +1,98 @@
-/* Custom CSS overrides or additions */
+/* ==================================================================
+   NAIRA - NBU ARTIFICIAL INTELLIGENCE RESEARCH & ADVANCEMENT INSTITUTE
+   Custom Stylesheet — February 2026
+   ================================================================== */
+
 .glass-card {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
+/* Fade In Up Animation */
 .animate-fade-in-up {
-  animation: fadeInUp 1s ease-out;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out forwards;
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
+/* Staggered animation delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* Mobile Menu — Smooth Drop-Down (Now Fully Working) */
 #mobile-menu {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   transform-origin: top;
+  opacity: 0;
+  transform: scaleY(0.8);
 }
 
 #mobile-menu:not(.hidden) {
+  opacity: 1;
   transform: scaleY(1);
 }
 
 #mobile-menu.hidden {
+  opacity: 0;
   transform: scaleY(0);
   height: 0;
   padding-top: 0;
   padding-bottom: 0;
   overflow: hidden;
 }
-/* Add more as needed for animations or specific styles */
+
+/* Extra Polish — African Tech Futurism */
+::selection {
+  background: #f59e0b;
+  color: #0f172a;
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* Subtle pulse for hero blobs */
+.animate-pulse-slow {
+  animation: pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Hover lift for interactive cards */
+.group:hover .group-hover\\:scale-110 {
+  transform: scale(1.1);
+}
+
+/* Ensure navbar stays above all content */
+naira-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+/* Body padding to prevent content hiding under fixed navbar */
+body {
+  padding-top: 80px; /* Adjust if your navbar height changes */
+}
+
+/* Final touch — African elegance */
+.font-display {
+  letter-spacing: -0.02em;
+}
+
+/* ==================================================================
+   END OF FILE — NBU ARTIFICIAL INTELLIGENCE RESEARCH & ADVANCEMENT INSTITUTE
+   ================================================================== */
