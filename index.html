@@ -6,42 +6,34 @@
     <title>NAIRA - African AI & XR Excellence Hub</title>
     <meta name="description" content="NAIRA transforms education and innovation through AI and XR technologies, embedding African knowledge systems into global tech solutions.">
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Feather Icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    
+    <!-- SEO & Metadata -->
+    <link rel="canonical" href="https://naira-hub.edu" />
+    <link rel="icon" type="image/png" href="/assets/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/assets/images/favicon-192x192.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#4f46e5">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://naira-hub.edu/">
+    <meta property="og:title" content="NAIRA - African AI & XR Excellence Hub">
+    <meta property="og:description" content="Transforming education and innovation through AI and XR, embedding African knowledge systems into global tech.">
+    <meta property="og:image" content="https://naira-hub.edu/assets/images/hero-bg.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://naira-hub.edu/">
+    <meta property="twitter:title" content="NAIRA - African AI & XR Excellence Hub">
+    <meta property="twitter:description" content="Transforming education and innovation through AI and XR, embedding African knowledge systems into global tech.">
+    <meta property="twitter:image" content="https://naira-hub.edu/assets/images/hero-bg.jpg">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="style.css">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Space Grotesk', 'sans-serif'],
-                    },
-                    colors: {
-                        naira: {
-                            primary: '#4f46e5', // Indigo 600
-                            secondary: '#f59e0b', // Amber 500
-                            dark: '#0f172a', // Slate 900
-                            darker: '#020617', // Slate 950
-                            accent: '#10b981', // Emerald 500
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Vite Main Script (Includes styles) -->
+    <script type="module" src="/src/script.js"></script>
 </head>
 <body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white overflow-x-hidden">
 
@@ -54,7 +46,7 @@
             <!-- Animated Background -->
             <div class="absolute inset-0 z-0">
                 <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/40 via-slate-900 to-slate-900"></div>
-                <div class="absolute top-0 left-0 w-full h-full bg-[url('http://static.photos/abstract/1200x630/42')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
+                <div class="absolute top-0 left-0 w-full h-full bg-[url('/assets/images/hero-bg.jpg')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
                 <div class="absolute -top-40 -right-40 w-96 h-96 bg-indigo-600/30 rounded-full blur-3xl animate-pulse"></div>
                 <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
             </div>
@@ -83,8 +75,8 @@
                             Explore Our Vision
                             <i data-feather="arrow-down" class="w-4 h-4 group-hover:translate-y-1 transition-transform"></i>
                         </a>
-                        <a href="#pillars" class="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/20 text-white rounded-full font-medium transition-all duration-300 backdrop-blur-sm hover:scale-105">
-                            Strategic Pillars
+                        <a href="#partner" class="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/20 text-white rounded-full font-medium transition-all duration-300 backdrop-blur-sm hover:scale-105">
+                            Partner With Us
                         </a>
                     </div>
                 </div>
@@ -156,7 +148,7 @@
                     <div class="relative">
                         <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-amber-600 rounded-3xl blur-2xl opacity-20"></div>
                         <div class="relative glass-card rounded-3xl p-8 border border-white/10">
-                            <img src="http://static.photos/technology/640x480/123" alt="AI Innovation" class="w-full h-64 object-cover rounded-2xl mb-6">
+                            <img src="/assets/images/vision-ai.jpg" alt="AI Innovation" class="w-full h-64 object-cover rounded-2xl mb-6">
                             <div class="space-y-4">
                                 <div class="flex items-center gap-3 text-emerald-400">
                                     <i data-feather="check-circle" class="w-5 h-5"></i>
@@ -183,7 +175,7 @@
 
         <!-- Strategic Pillars Section -->
         <section id="pillars" class="py-24 bg-slate-950/50 relative overflow-hidden">
-            <div class="absolute inset-0 bg-[url('http://static.photos/minimal/1200x630/456')] bg-cover bg-center opacity-5"></div>
+            <div class="absolute inset-0 bg-[url('/assets/images/pillars-bg.jpg')] bg-cover bg-center opacity-5"></div>
             
             <div class="container mx-auto px-6 relative z-10">
                 <div class="text-center max-w-3xl mx-auto mb-16">
@@ -434,17 +426,64 @@
         </section>
 
         <!-- CTA Section -->
-        <section class="py-24 bg-slate-950">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="font-display text-4xl md:text-5xl font-bold text-white mb-6">Join the African AI Renaissance</h2>
-                <p class="text-slate-400 text-lg max-w-2xl mx-auto mb-10">Be part of the transformation. Whether you're a student, educator, researcher, or industry partner, NAIRA offers pathways to innovate and grow.</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#" class="px-8 py-4 bg-gradient-to-r from-indigo-600 to-amber-600 text-white rounded-full font-medium hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 hover:scale-105">
-                        Partner With Us
-                    </a>
-                    <a href="#" class="px-8 py-4 bg-white/5 border border-white/20 text-white rounded-full font-medium hover:bg-white/10 transition-all duration-300">
-                        Learn More
-                    </a>
+        <section id="partner" class="py-24 bg-slate-950">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center mb-16">
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-white mb-6">Join the African AI Renaissance</h2>
+                    <p class="text-slate-400 text-lg max-w-2xl mx-auto">Be part of the transformation. Whether you're a student, educator, researcher, or industry partner, NAIRA offers pathways to innovate and grow.</p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-16 items-start">
+                    <div class="space-y-8">
+                        <h3 class="font-display text-3xl font-bold text-white mb-6">Partner With Us</h3>
+                        <p class="text-slate-400 mb-8 leading-relaxed">
+                            Interested in collaborating, investing, or bringing NAIRA modules to your institution? Fill out the form and our team will get back to you within 48 hours.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4 text-slate-300">
+                                <div class="w-10 h-10 rounded-lg bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center">
+                                    <i data-feather="mail" class="w-5 h-5 text-indigo-400"></i>
+                                </div>
+                                <span>partnership@naira-hub.edu</span>
+                            </div>
+                            <div class="flex items-center gap-4 text-slate-300">
+                                <div class="w-10 h-10 rounded-lg bg-amber-600/20 border border-amber-500/30 flex items-center justify-center">
+                                    <i data-feather="map-pin" class="w-5 h-5 text-amber-400"></i>
+                                </div>
+                                <span>Lagos, Nigeria</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-3xl p-8 border border-white/10">
+                        <form action="https://formspree.io/f/xoqgdgzl" method="POST" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label for="full-name" class="text-sm font-medium text-slate-300">Full Name</label>
+                                    <input type="text" id="full-name" name="name" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all outline-none" placeholder="John Doe">
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="email" class="text-sm font-medium text-slate-300">Email Address</label>
+                                    <input type="email" id="email" name="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all outline-none" placeholder="john@example.com">
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-2">
+                                <label for="organization" class="text-sm font-medium text-slate-300">Organization</label>
+                                <input type="text" id="organization" name="organization" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all outline-none" placeholder="University or Company Name">
+                            </div>
+
+                            <div class="space-y-2">
+                                <label for="message" class="text-sm font-medium text-slate-300">Message</label>
+                                <textarea id="message" name="message" rows="4" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all outline-none resize-none" placeholder="Tell us about your interest in NAIRA..."></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full px-8 py-4 bg-gradient-to-r from-indigo-600 to-amber-600 text-white rounded-xl font-bold hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 hover:scale-[1.02]">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -453,17 +492,5 @@
     <!-- Footer Component -->
     <naira-footer></naira-footer>
 
-    <!-- Component Scripts -->
-    <script src="components/navbar.js"></script>
-    <script src="components/footer.js"></script>
-    <script src="components/pillar-card.js"></script>
-    
-    <!-- Main Script -->
-    <script src="script.js"></script>
-    
-    <!-- Initialize Feather Icons -->
-    <script>
-        feather.replace();
-    </script>
 </body>
 </html>
