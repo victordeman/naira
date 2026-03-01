@@ -6,13 +6,14 @@ class NairaNavbar extends HTMLElement {
           <a href="#hero" class="font-display text-2xl font-bold text-white">NAIRA</a>
           
           <!-- Desktop menu -->
-          <div class="hidden md:flex gap-6">
+          <div class="hidden md:flex gap-6 items-center">
             <a href="#hero" class="text-slate-300 hover:text-white transition">Home</a>
             <a href="#vision" class="text-slate-300 hover:text-white transition">Vision</a>
             <a href="#pillars" class="text-slate-300 hover:text-white transition">Pillars</a>
             <a href="#architecture" class="text-slate-300 hover:text-white transition">Architecture</a>
             <a href="#revenue" class="text-slate-300 hover:text-white transition">Revenue</a>
             <a href="#content" class="text-slate-300 hover:text-white transition">Content Model</a>
+            <a href="#partner" class="text-indigo-400 hover:text-white transition font-medium border border-indigo-500/30 px-4 py-1.5 rounded-full hover:bg-indigo-500/10">Partner</a>
           </div>
 
           <!-- Hamburger button -->
@@ -30,6 +31,7 @@ class NairaNavbar extends HTMLElement {
             <a href="#architecture" class="text-slate-300 hover:text-white transition py-2">Architecture</a>
             <a href="#revenue" class="text-slate-300 hover:text-white transition py-2">Revenue</a>
             <a href="#content" class="text-slate-300 hover:text-white transition py-2">Content Model</a>
+            <a href="#partner" class="text-indigo-400 hover:text-white transition py-2 font-medium">Partner</a>
           </div>
         </div>
       </nav>
