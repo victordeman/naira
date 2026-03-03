@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
 export const metadata: Metadata = {
   title: "NAIRA - African AI & XR Excellence Hub",
   description: "NAIRA transforms education and innovation through AI and XR technologies, embedding African knowledge systems into global tech solutions.",
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
