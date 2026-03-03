@@ -22,9 +22,9 @@ import {
   MapPin 
 } from "lucide-react";
 import Link from "next/link";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import PillarCard from "./components/PillarCard";
+import Navbar from "@/app/components/Navbar";
+import Footer from "@/app/components/Footer";
+import PillarCard from "@/app/components/PillarCard";
 import { getSiteContent } from "@/app/actions";
 
 export default async function Home() {
