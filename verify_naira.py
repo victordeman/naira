@@ -7,8 +7,8 @@ async def run():
         page = await browser.new_page()
         
         # Go to the local dev server
-        print("Connecting to http://localhost:4173/...")
-        await page.goto("http://localhost:4173/")
+        print("Connecting to http://localhost:3000/...")
+        await page.goto("http://localhost:3000/")
         
         # Check title
         title = await page.title()
