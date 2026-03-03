@@ -4,10 +4,11 @@
 NAIRA (NBU Artificial Intelligence Research & Advancement Institute) is a pioneering hub dedicated to transforming education and innovation through immersive Extended Reality (XR) experiences and agentic AI architectures. Our mission is to embed African languages, culture, and indigenous knowledge into global technology solutions, driving a Renaissance in African AI.
 
 ## Tech Stack
-- **Frontend Framework:** Vanilla JS with Custom Web Components
-- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Frontend Framework:** [Next.js 15+](https://nextjs.org/) (App Router)
+- **Library:** [React 19](https://react.dev/)
+- **Backend & Auth:** [Supabase](https://supabase.com/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-- **Icons:** [Feather Icons](https://feathericons.com/)
+- **Icons:** [Lucide React](https://lucide.dev/)
 - **Fonts:** [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) & [Inter](https://fonts.google.com/specimen/Inter)
 - **Deployment & Form Handling:** Formspree (for Partner With Us forms)
 
@@ -29,30 +30,40 @@ NAIRA (NBU Artificial Intelligence Research & Advancement Institute) is a pionee
    npm install
    ```
 
-3. Start the development server:
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory and add your Supabase credentials:
+   ```
+   NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+   ```
+
+4. Start the development server:
    ```bash
    npm run dev
    ```
 
-4. Build for production:
+5. Build for production:
    ```bash
    npm run build
    ```
 
-5. Preview the production build:
+6. Start the production server:
    ```bash
-   npm run preview
+   npm run start
    ```
 
 ## Project Structure
-- `index.html`: Main entry point.
-- `src/`: Source code directory.
-  - `script.js`: Main JavaScript entry point.
-  - `style.css`: Global styles and Tailwind directives.
-  - `components/`: Custom Web Components (Navbar, Footer, Pillar Cards).
+- `app/`: Next.js App Router directory.
+  - `layout.tsx`: Root layout component.
+  - `page.tsx`: Main landing page.
+  - `globals.css`: Global styles and Tailwind directives.
+  - `components/`: React components (Navbar, Footer, PillarCards).
+  - `actions.ts`: Server actions for data fetching and auth.
 - `public/`: Static assets (Images, Favicon, Manifest).
+- `supabase/`: Supabase configuration and migrations.
+- `utils/`: Utility functions and Supabase client.
 - `tailwind.config.js`: Tailwind CSS configuration.
-- `postcss.config.js`: PostCSS configuration.
+- `next.config.js`: Next.js configuration.
 
 ## Contribution Guidelines
 1. Fork the project.

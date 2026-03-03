@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" class="scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <body className="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white overflow-x-hidden">
         {children}
       </body>
