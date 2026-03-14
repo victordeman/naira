@@ -25,11 +25,12 @@ import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import PillarCard from "@/app/components/PillarCard";
+import Navbar from "@/app/components/navbar";
+import Footer from "@/app/components/footer";
+import PillarCard from "@/app/components/pillar-card";
 import { getSiteContent } from "@/app/actions";
-
 export default async function Home() {
   const pillars = await getSiteContent("pillar");
-
   const fallbackPillars = [
     { number: "01", title: "African-Centered AI Research", description: "Focus on embedding African languages and indigenous knowledge into AI to create culturally relevant technologies.", icon: "Database", color: "indigo" },
     { number: "02", title: "Educational Transformation", description: "Use XR and agentic AI technologies to revolutionize education and automate academic workflows.", icon: "Monitor", color: "amber" },
@@ -38,7 +39,6 @@ export default async function Home() {
     { number: "05", title: "Sustainable Monetization", description: "Develop diverse revenue streams and marketplaces for AI and XR solutions to ensure sustainability.", icon: "TrendingUp", color: "rose" },
     { number: "06", title: "Accessibility & Scalability", description: "Ensure solutions are scalable and accessible across devices using cloud-based architectures.", icon: "Cloud", color: "cyan" },
   ];
-
   const displayPillars = pillars.length > 0 ? pillars.map(p => ({
     number: p.metadata?.number || "00",
     title: p.title,
@@ -46,11 +46,9 @@ export default async function Home() {
     icon: p.icon,
     color: p.color
   })) : fallbackPillars;
-
   return (
     <>
       <Navbar />
-
       <main>
         {/* Hero Section */}
         <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
@@ -60,7 +58,6 @@ export default async function Home() {
             <div className="absolute -top-40 -right-40 w-96 h-96 bg-indigo-600/30 rounded-full blur-3xl animate-pulse"></div>
             <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
           </div>
-
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-5xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8 animate-fade-in-up">
@@ -79,7 +76,6 @@ export default async function Home() {
               <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in-up delay-300">
                 Transforming education and innovation through immersive XR experiences and agentic AI architectures, embedding African languages, culture, and indigenous knowledge into global technology solutions.
               </p>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up delay-400">
                 <Link href="#vision" className="group px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full font-medium transition-all duration-300 flex items-center gap-2 hover:scale-105 hover:shadow-lg hover:shadow-indigo-500/25">
                   Explore Our Vision
@@ -90,7 +86,6 @@ export default async function Home() {
                 </Link>
               </div>
             </div>
-
             <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto animate-fade-in-up delay-500">
               <div className="glass-card p-6 rounded-2xl text-center">
                 <div className="text-3xl font-display font-bold text-indigo-400 mb-1">6</div>
@@ -111,7 +106,6 @@ export default async function Home() {
             </div>
           </div>
         </section>
-
         {/* Vision & Mission Section */}
         <section id="vision" className="py-24 relative">
           <div className="container mx-auto px-6">
@@ -125,7 +119,6 @@ export default async function Home() {
                     NAIRA aims to become Africa&apos;s foremost center for AI innovation and excellence, driving transformative research aligned with Africa&apos;s cultural contexts and development goals.
                   </p>
                 </div>
-
                 <div className="space-y-6">
                   <div className="flex gap-4 items-start group">
                     <div className="w-12 h-12 rounded-xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center shrink-0 group-hover:bg-indigo-600/30 transition-colors">
@@ -136,7 +129,6 @@ export default async function Home() {
                       <p className="text-slate-400">Positioning NBU as a premier AI center in Nigeria and across Africa, setting global standards for African-centered technological innovation.</p>
                     </div>
                   </div>
-
                   <div className="flex gap-4 items-start group">
                     <div className="w-12 h-12 rounded-xl bg-amber-600/20 border border-amber-500/30 flex items-center justify-center shrink-0 group-hover:bg-amber-600/30 transition-colors">
                       <Globe className="w-6 h-6 text-amber-400" />
@@ -148,7 +140,6 @@ export default async function Home() {
                   </div>
                 </div>
               </div>
-
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-amber-600 rounded-3xl blur-2xl opacity-20"></div>
                 <div className="relative glass-card rounded-3xl p-8 border border-white/10">
@@ -177,7 +168,6 @@ export default async function Home() {
             </div>
           </div>
         </section>
-
         {/* Strategic Pillars Section */}
         <section id="pillars" className="py-24 bg-slate-950/50 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('/assets/images/pillars-bg.jpg')] bg-cover bg-center opacity-5"></div>
@@ -188,7 +178,6 @@ export default async function Home() {
               <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 mb-6 text-white">Six Strategic Pillars</h2>
               <p className="text-slate-400 text-lg">Our comprehensive approach to transforming Africa&apos;s technological landscape through education, innovation, and sustainable growth.</p>
             </div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {displayPillars.map((pillar) => (
                 <PillarCard 
@@ -203,7 +192,6 @@ export default async function Home() {
             </div>
           </div>
         </section>
-
         {/* Architecture Section */}
         <section id="architecture" className="py-24 relative">
           <div className="container mx-auto px-6">
@@ -212,7 +200,6 @@ export default async function Home() {
               <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 mb-6 text-white">Three-Layer Architecture</h2>
               <p className="text-slate-400 text-lg">Our robust technological infrastructure designed for scalability, security, and immersive experiences.</p>
             </div>
-
             <div className="max-w-5xl mx-auto space-y-8">
               {/* Experience Layer */}
               <div className="glass-card rounded-2xl p-8 border-l-4 border-indigo-500 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
@@ -235,7 +222,6 @@ export default async function Home() {
                   </div>
                 </div>
               </div>
-
               {/* Intelligence Layer */}
               <div className="glass-card rounded-2xl p-8 border-l-4 border-amber-500 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-amber-600/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
@@ -257,7 +243,6 @@ export default async function Home() {
                   </div>
                 </div>
               </div>
-
               {/* Data & Integration Layer */}
               <div className="glass-card rounded-2xl p-8 border-l-4 border-emerald-500 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-600/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
@@ -280,7 +265,6 @@ export default async function Home() {
                 </div>
               </div>
             </div>
-
             <div className="mt-16 glass-card rounded-3xl p-8 border border-white/10">
               <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center">
                 <div className="flex-1 p-6 rounded-2xl bg-indigo-600/10 border border-indigo-500/20">
@@ -306,7 +290,6 @@ export default async function Home() {
             </div>
           </div>
         </section>
-
         {/* Revenue Streams Section */}
         <section id="revenue" className="py-24 bg-slate-950/50">
           <div className="container mx-auto px-6">
@@ -315,7 +298,6 @@ export default async function Home() {
               <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 mb-6 text-white">Revenue Streams</h2>
               <p className="text-slate-400 text-lg">Diverse monetization strategies ensuring long-term viability and growth of African AI/XR innovations.</p>
             </div>
-
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               <div className="glass-card rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
                 <div className="w-14 h-14 rounded-xl bg-purple-600/20 border border-purple-500/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -324,7 +306,6 @@ export default async function Home() {
                 <h3 className="text-xl font-display font-bold text-white mb-3">XR Modules Marketplace</h3>
                 <p className="text-slate-400 leading-relaxed">Sell XR lessons to schools, corporate partners, and training centers as a core revenue stream, creating a vibrant ecosystem of African-centered educational content.</p>
               </div>
-
               <div className="glass-card rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
                 <div className="w-14 h-14 rounded-xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Briefcase className="w-7 h-7 text-blue-400" />
@@ -332,7 +313,6 @@ export default async function Home() {
                 <h3 className="text-xl font-display font-bold text-white mb-3">Corporate & Government Training</h3>
                 <p className="text-slate-400 leading-relaxed">Offer tailored AI and XR courses for professional development in corporate and government sectors, driving digital transformation across industries.</p>
               </div>
-
               <div className="glass-card rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
                 <div className="w-14 h-14 rounded-xl bg-rose-600/20 border border-rose-500/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <CreditCard className="w-7 h-7 text-rose-400" />
@@ -340,7 +320,6 @@ export default async function Home() {
                 <h3 className="text-xl font-display font-bold text-white mb-3">Subscription Access</h3>
                 <p className="text-slate-400 leading-relaxed">Provide premium subscriptions granting students and faculty access to advanced simulations and AI agents, ensuring continuous learning and innovation.</p>
               </div>
-
               <div className="glass-card rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
                 <div className="w-14 h-14 rounded-xl bg-cyan-600/20 border border-cyan-500/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Award className="w-7 h-7 text-cyan-400" />
@@ -351,7 +330,6 @@ export default async function Home() {
             </div>
           </div>
         </section>
-
         {/* African Content Model */}
         <section id="content" className="py-24 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-indigo-950/20 to-slate-900"></div>
@@ -362,7 +340,6 @@ export default async function Home() {
                 <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">African-Centered Content Model</h2>
                 <p className="text-slate-300 text-lg">Embedding local languages, culture, and indigenous knowledge systems into scalable, sustainable technological solutions.</p>
               </div>
-
               <div className="grid md:grid-cols-3 gap-8 text-center">
                 <div className="space-y-3">
                   <div className="w-16 h-16 rounded-full bg-amber-600/20 border border-amber-500/30 flex items-center justify-center mx-auto">
@@ -371,7 +348,6 @@ export default async function Home() {
                   <h3 className="font-display font-bold text-white text-lg">Cultural Relevance</h3>
                   <p className="text-slate-400 text-sm">Content reflects local languages, culture, and knowledge systems unique to Africa.</p>
                 </div>
-
                 <div className="space-y-3">
                   <div className="w-16 h-16 rounded-full bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center mx-auto">
                     <Layers className="w-8 h-8 text-indigo-400" />
@@ -379,7 +355,6 @@ export default async function Home() {
                   <h3 className="font-display font-bold text-white text-lg">Scalable Design</h3>
                   <p className="text-slate-400 text-sm">Modular design allows expansion and supports sustainable revenue generation over time.</p>
                 </div>
-
                 <div className="space-y-3">
                   <div className="w-16 h-16 rounded-full bg-emerald-600/20 border border-emerald-500/30 flex items-center justify-center mx-auto">
                     <Anchor className="w-8 h-8 text-emerald-400" />
@@ -391,7 +366,6 @@ export default async function Home() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section id="partner" className="py-24 bg-slate-950">
           <div className="container mx-auto px-6">
@@ -399,7 +373,6 @@ export default async function Home() {
               <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6">Join the African AI Renaissance</h2>
               <p className="text-slate-400 text-lg max-w-2xl mx-auto">Be part of the transformation. Whether you&apos;re a student, educator, researcher, or industry partner, NAIRA offers pathways to innovate and grow.</p>
             </div>
-
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div className="space-y-8">
                 <h3 className="font-display text-3xl font-bold text-white mb-6">Partner With Us</h3>
@@ -422,7 +395,6 @@ export default async function Home() {
                   </div>
                 </div>
               </div>
-
               <div className="glass-card rounded-3xl p-8 border border-white/10">
                 <form action="https://formspree.io/f/xoqgdgzl" method="POST" className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
@@ -440,12 +412,10 @@ export default async function Home() {
                     <label htmlFor="organization" className="text-sm font-medium text-slate-300">Organization</label>
                     <input type="text" id="organization" name="organization" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all outline-none" placeholder="University or Company Name" />
                   </div>
-
                   <div className="space-y-2">
                     <label htmlFor="message" className="text-sm font-medium text-slate-300">Message</label>
                     <textarea id="message" name="message" rows={4} required className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all outline-none resize-none" placeholder="Tell us about your interest in NAIRA..."></textarea>
                   </div>
-
                   <button type="submit" className="w-full px-8 py-4 bg-gradient-to-r from-indigo-600 to-amber-600 text-white rounded-xl font-bold hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 hover:scale-[1.02]">
                     Send Message
                   </button>
@@ -455,7 +425,6 @@ export default async function Home() {
           </div>
         </section>
       </main>
-
       <Footer />
     </>
   );
