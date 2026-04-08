@@ -25,9 +25,6 @@ import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import PillarCard from "@/app/components/PillarCard";
-import Navbar from "@/app/components/navbar";
-import Footer from "@/app/components/footer";
-import PillarCard from "@/app/components/pillar-card";
 import { getSiteContent } from "@/app/actions";
 export default async function Home() {
   const pillars = await getSiteContent("pillar");
