@@ -1,7 +1,7 @@
 # NAIRA - African AI & XR Excellence Hub
 
 ## Project Description
-NAIRA (NBU Artificial Intelligence Research & Advancement Institute) is a pioneering hub dedicated to transforming education and innovation through immersive Extended Reality (XR) experiences and agentic AI architectures. Our mission is to embed African languages, culture, and indigenous knowledge into global technology solutions, driving a Renaissance in African AI.
+NAIRA (NBU Artificial Intelligence Research & Advancement Institute) is a pioneering hub dedicated to transforming education and innovation through immersive Extended Reality (XR) experiences and agentic AI architectures. Our mission is to embed African languages, culture, and indigenous knowledge into global technology solutions, driving a Renaissance in African AI. Check it out here : https://nairasite-nu.vercel.app/
 
 ## Tech Stack
 - **Frontend Framework:** Vanilla JS with Custom Web Components
